@@ -22,11 +22,7 @@ def foo_str(_, identifier: str):
 
 @resonate.register
 def foo(_, identifier: str) -> str:
-    if not simulation.random_failure():
-        return identifier
-    else:
-        log.error("Random failure")
-        raise Exception("Random failure")
+    return identifier
 
 
 def main():

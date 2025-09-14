@@ -17,5 +17,11 @@ uv run main
 
 # api call
 uv run start-api
-hurl hurl/get.hurl
+make get
+```
+
+## Benchmark
+
+```bash
+make benchmark
 ```
