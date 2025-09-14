@@ -10,7 +10,7 @@ def main():
     identifier = str(uuid4())
     # try:
     result = resonate.options(target="poll://any@foo_nodes").rpc(
-        id=identifier, func="foo", identifier=identifier
+        id=identifier, func="foo_str", identifier=identifier
     )
 
     print(result)

@@ -7,5 +7,15 @@ Ref: <https://docs.resonatehq.io/get-started/existing-project>
 ```bash
 make serve
 uv run foo  # start foo node
-uv run main # make a call to remote function
+```
+
+## Run
+
+```bash
+# single call
+uv run main
+
+# api call
+uv run start-api
+hurl hurl/get.hurl
 ```
