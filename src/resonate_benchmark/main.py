@@ -7,14 +7,15 @@ resonate = Resonate.remote(host=os.environ["RESONATE_HOST"])
 
 
 def main():
-    try:
-        result = resonate.options(target="poll://any@foo_nodes").rpc(
-            id=str(uuid4()), func="foo", v="baz"
-        )
+    identifier = str(uuid4())
+    # try:
+    result = resonate.options(target="poll://any@foo_nodes").rpc(
+        id=identifier, func="foo", identifier=identifier
+    )
 
-        print(result)
-    except Exception as e:
-        print(e)
+    print(result)
+    # except Exception as e:
+    #     print(e)
 
 
 if __name__ == "__main__":
