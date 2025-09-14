@@ -6,11 +6,19 @@ authors = [
     { name = "Karn Wong", email = "karn@karnwong.me" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "resonate-sdk>=0.6.3",
+]
 
 [project.scripts]
 resonate-benchmark = "resonate_benchmark:main"
+foo = "resonate_benchmark.nodes.foo:main"
 
 [build-system]
 requires = ["uv_build>=0.8.2,<0.9.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.1",
+]
