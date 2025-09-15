@@ -24,7 +24,7 @@ def foo_str(_, identifier: str):
 def foo(_, identifier: str) -> str:
     print(f"id: {identifier}")
     if not simulation.random_failure():
-        return f"id: {identifier}"
+        return identifier
     else:
         log.error("Random failure")
         raise Exception("Random failure")
