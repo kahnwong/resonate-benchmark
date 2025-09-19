@@ -27,7 +27,7 @@ async def main() -> ResponseItem:
     # log.info(f"Input: {request}")
 
     identifier = str(uuid4())
-    result = resonate.options(target="poll://any@foo_nodes").rpc(
+    result = await resonate.options(target="poll://any@foo_nodes").begin_rpc(
         id=identifier, func="foo", identifier=identifier
     )
 

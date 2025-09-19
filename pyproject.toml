@@ -9,7 +9,7 @@ requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.116.1",
     "pydantic>=2.11.9",
-    "resonate-sdk>=0.6.3",
+    "resonate-sdk>=0.6.4",
     "uvicorn>=0.35.0",
 ]
 
