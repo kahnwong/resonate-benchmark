@@ -6,17 +6,17 @@ Ref: <https://docs.resonatehq.io/get-started/existing-project>
 
 ```bash
 make serve
-uv run foo  # start foo node
+make start-node  # start foo node
 ```
 
 ## Run
 
 ```bash
 # single call
-uv run main
+make test
 
 # api call
-uv run start-api
+make start
 make get
 ```
 

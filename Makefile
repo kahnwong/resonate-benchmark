@@ -11,13 +11,21 @@ serve:
 	    --aio-store-postgres-database resonate \
 	    --aio-store-postgres-query sslmode=disable
 
+# resonate nodes
+start-node:
+	uv run foo
+
+# test: single call
+test:
+	uv run main
+
 # api server
 start-dev:
 	uv run uvicorn resonate_benchmark.server:app --port 8081 --reload
 start:
 	uv run uvicorn resonate_benchmark.server:app --port 8081
 
-# tests
+# tests: api
 get:
 	hurl hurl/get.hurl
 
