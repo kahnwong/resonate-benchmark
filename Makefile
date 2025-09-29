@@ -14,6 +14,8 @@ serve:
 # resonate nodes
 start-node:
 	uv run foo
+start-node-otel:
+	uv run opentelemetry-instrument foo-otel
 
 # test: single call
 test:
@@ -24,6 +26,8 @@ start-dev:
 	uv run uvicorn resonate_benchmark.server:app --port 8081 --reload
 start:
 	uv run uvicorn resonate_benchmark.server:app --port 8081
+start-otel:
+	uv run opentelemetry-instrument uvicorn resonate_benchmark.server_otel:app --port 8081
 
 # tests: api
 get:
